@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "Compile Test",
+      "setup": "cmake . && make",
+      "run": "./page284",
+      "input": "0",
+      "output": "",
+      "comparison": "included",
+      "timeout": 3,
+      "points": 25
+    },
+    {
+      "name": "Test for Range",
+      "setup": "cmake . && make",
+      "run": "./page284",
+      "input": "1",
+      "output": "^[1-9][0-9]?$|^100$",
+      "comparison": "regex",
+      "timeout": 3,
+      "points": 25
+    },
+    {
+      "name": "Test for 5 Numbers",
+      "setup": "cmake . && make",
+      "run": "./page284",
+      "input": "5",
+      "output": "[0-9]+\\s[0-9]+\\s[0-9]+\\s[0-9]+\\s[0-9]+",
+      "comparison": "regex",
+      "timeout": 3,
+      "points": 25
+    },
+    {
+      "name": "Test for 10 Numbers",
+      "setup": "cmake . && make",
+      "run": "./page284",
+      "input": "10",
+      "output": "[0-9]+\\s[0-9]+\\s[0-9]+\\s[0-9]+\\s[0-9]+\\s[0-9]+\\s[0-9]+\\s[0-9]+\\s[0-9]+\\s[0-9]+",
+      "comparison": "regex",
+      "timeout": 3,
+      "points": 25
+    }
+  ]
+}
